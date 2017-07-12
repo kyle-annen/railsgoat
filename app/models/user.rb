@@ -51,7 +51,7 @@ class User < ApplicationRecord
     if user.password == Digest::MD5.hexdigest(password)
       auth = user
     else
-      raise "Incorrect Password!"
+      raise "#{user.password} does not match input!"
     end
     return auth
   end

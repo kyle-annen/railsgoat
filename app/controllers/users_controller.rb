@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       user.skip_user_id_assign = true
       user.skip_hash_password = true
       user.update_attributes(user_params_without_password)
-      if !(params[:user][:password].empty?) && (params[:user][:password] == params[:user][:password_confirmation])
+      if !(params[:user][:password].empty?) || (params[:user][:password] == params[:user][:password_confirmation])
         user.skip_hash_password = false
         user.password = params[:user][:password]
       end

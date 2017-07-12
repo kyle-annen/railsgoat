@@ -6,8 +6,8 @@ users = [
      {
        :email => "admin@metacorp.com", 
        :admin => true, 
-       :password => "admin1234", 
-       :password_confirmation => "admin1234", 
+       :password => "admin", 
+       :password_confirmation => "password", 
        :first_name => "Admin", 
        :last_name => "", 
        :user_id =>1 
